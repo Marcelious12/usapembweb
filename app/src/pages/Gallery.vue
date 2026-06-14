@@ -130,7 +130,9 @@
 export default {
   name: 'Gallery',
   data() {
+    const baseUrl = import.meta.env.BASE_URL
     return {
+      baseUrl,
       activeCategory: 'all',
       lightboxOpen: false,
       currentPhotoIndex: 0,
@@ -142,91 +144,91 @@ export default {
       ],
       photos: [
         {
-          src: '/images/hero-gunung-mas.jpg',
+          src: baseUrl + 'images/hero-gunung-mas.jpg',
           title: 'Kebun Teh Gunung Mas',
           description: 'Pemandangan luas kebun teh yang hijau dan menyejukkan mata',
           category: 'landscape',
           size: 'large'
         },
         {
-          src: '/images/tea-garden.jpg',
+          src: baseUrl + 'images/tea-garden.jpg',
           title: 'Aktivitas Memetik Teh',
           description: 'Petani lokal sedang memetik daun teh di pagi hari',
           category: 'activity',
           size: 'normal'
         },
         {
-          src: '/images/horse-riding.jpg',
+          src: baseUrl + 'images/horse-riding.jpg',
           title: 'Berkuda di Padang Rumput',
           description: 'Pengalaman berkuda dengan latar belakang pegunungan',
           category: 'activity',
           size: 'normal'
         },
         {
-          src: '/images/trekking.jpg',
+          src: baseUrl + 'images/trekking.jpg',
           title: 'Jalur Trekking',
           description: 'Jalur kayu yang indah melewati hutan dan kebun teh',
           category: 'activity',
           size: 'normal'
         },
         {
-          src: '/images/photo-spot.jpg',
+          src: baseUrl + 'images/photo-spot.jpg',
           title: 'Spot Foto Instagramable',
           description: 'Spot foto populer dengan bingkai kayu dan pemandangan lembah',
           category: 'spot',
           size: 'large'
         },
         {
-          src: '/images/gallery-1.jpg',
+          src: baseUrl + 'images/gallery-1.jpg',
           title: 'Jalan Berliku Kebun Teh',
           description: 'Jalan berliku yang membelah kebun teh dari udara',
           category: 'landscape',
           size: 'normal'
         },
         {
-          src: '/images/gallery-2.jpg',
+          src: baseUrl + 'images/gallery-2.jpg',
           title: 'Taman Bunga',
           description: 'Taman bunga warna-warni yang indah di area wisata',
           category: 'landscape',
           size: 'normal'
         },
         {
-          src: '/images/gallery-3.jpg',
+          src: baseUrl + 'images/gallery-3.jpg',
           title: 'Kafe Gunung',
           description: 'Kafe kayu dengan pemandangan pegunungan yang menakjubkan',
           category: 'spot',
           size: 'normal'
         },
         {
-          src: '/images/gallery-4.jpg',
+          src: baseUrl + 'images/gallery-4.jpg',
           title: 'Air Terjun Tersembunyi',
           description: 'Air terjun alami di area hutan sekitar Gunung Mas',
           category: 'landscape',
           size: 'normal'
         },
         {
-          src: '/images/gallery-5.jpg',
+          src: baseUrl + 'images/gallery-5.jpg',
           title: 'Berkah Keluarga',
           description: 'Keluarga menikmati piknik di padang rumput hijau',
           category: 'activity',
           size: 'normal'
         },
         {
-          src: '/images/gallery-6.jpg',
+          src: baseUrl + 'images/gallery-6.jpg',
           title: 'Camping di Malam Hari',
           description: 'Berkemah dengan pemandangan matahari terbenam dan bintang',
           category: 'activity',
           size: 'normal'
         },
         {
-          src: '/images/gallery-7.jpg',
+          src: baseUrl + 'images/gallery-7.jpg',
           title: 'Gazebo Tradisional',
           description: 'Gazebo kayu tradisional untuk bersantai menikmati pemandangan',
           category: 'spot',
           size: 'normal'
         },
         {
-          src: '/images/gallery-8.jpg',
+          src: baseUrl + 'images/gallery-8.jpg',
           title: 'Sunrise di Kebun Teh',
           description: 'Momen golden hour saat matahari terbit di kebun teh',
           category: 'landscape',

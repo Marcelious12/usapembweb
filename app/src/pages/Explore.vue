@@ -13,7 +13,7 @@
       <div class="container">
         <div class="overview-grid">
           <div class="overview-image reveal">
-            <img src="/images/hero-gunung-mas.jpg" alt="Pemandangan Agrowisata Gunung Mas">
+            <img :src="baseUrl + 'images/hero-gunung-mas.jpg'" alt="Pemandangan Agrowisata Gunung Mas">
           </div>
           <div class="overview-content reveal stagger-1">
             <span class="section-label">Tentang Destinasi</span>
@@ -214,7 +214,9 @@
 export default {
   name: 'Explore',
   data() {
+    const baseUrl = import.meta.env.BASE_URL
     return {
+      baseUrl,
       activeFilter: 'all',
       tags: ['Wisata Alam', 'Kebun Teh', 'Berkuda', 'Trekking', 'Edukatif', 'Keluarga'],
       infoCards: [
@@ -243,7 +245,7 @@ export default {
         {
           title: 'Kebun Teh',
           description: 'Jelajahi hamparan kebun teh hijau yang terhampar luas di lereng pegunungan. Nikmati suasana tenang sambil belajar tentang proses pengolahan teh dari daun hingga siap minum.',
-          image: '/images/tea-garden.jpg',
+          image: baseUrl + 'images/tea-garden.jpg',
           duration: '1-2 jam',
           level: 'Mudah',
           popular: true
@@ -251,7 +253,7 @@ export default {
         {
           title: 'Berkuda',
           description: 'Rasakan pengalaman berkuda mengelilingi area kebun teh dengan pemandangan alam yang indah. Tersedia kuda yang ramah untuk pemula dengan pemandu profesional.',
-          image: '/images/horse-riding.jpg',
+          image: baseUrl + 'images/horse-riding.jpg',
           duration: '30-60 menit',
           level: 'Mudah',
           popular: true
@@ -259,7 +261,7 @@ export default {
         {
           title: 'Trekking',
           description: 'Lewati jalur trekking yang menantang melewati hutan pinus, kebun teh, dan spot panorama terbaik. Tersedia berbagai tingkat kesulitan dari pemula hingga advanced.',
-          image: '/images/trekking.jpg',
+          image: baseUrl + 'images/trekking.jpg',
           duration: '2-4 jam',
           level: 'Sedang',
           popular: false
@@ -267,7 +269,7 @@ export default {
         {
           title: 'Spot Foto',
           description: 'Berkunjung ke berbagai spot foto Instagramable dengan latar belakang kebun teh, pegunungan, dan sunset yang memukau. Jangan lupa bawa kamera Anda!',
-          image: '/images/photo-spot.jpg',
+          image: baseUrl + 'images/photo-spot.jpg',
           duration: '1 jam',
           level: 'Mudah',
           popular: true

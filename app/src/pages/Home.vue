@@ -3,7 +3,7 @@
     <!-- ====== HERO SECTION ====== -->
     <section class="hero">
       <div class="hero-image">
-        <img src="/images/hero-gunung-mas.jpg" alt="Pemandangan Agrowisata Gunung Mas Bogor" loading="eager">
+        <img :src="baseUrl + 'images/hero-gunung-mas.jpg'" alt="Pemandangan Agrowisata Gunung Mas Bogor" loading="eager">
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
@@ -98,7 +98,7 @@
             </router-link>
           </div>
           <div class="cta-image">
-            <img src="/images/photo-spot.jpg" alt="Spot foto Gunung Mas Bogor">
+            <img :src="baseUrl + 'images/photo-spot.jpg'" alt="Spot foto Gunung Mas Bogor">
           </div>
         </div>
       </div>

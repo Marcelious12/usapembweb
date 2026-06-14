@@ -14,7 +14,7 @@
         <div class="profile-card reveal">
           <!-- Profile Header with Cover -->
           <div class="profile-cover">
-            <div class="cover-gradient"></div>
+            <div class="cover-gradient" :style="coverGradientStyle"></div>
           </div>
 
           <!-- Profile Photo -->
@@ -22,7 +22,7 @@
             <div class="profile-photo">
               <!-- GANTI FOTO ANDA DI SINI -->
               <img
-                src="/images/profile-placeholder.jpg"
+                :src="baseUrl + 'images/profile-placeholder.jpg'"
                 alt="Foto Profil Mahasiswa"
               >
               <!-- GANTI FOTO ANDA DI SINI -->
@@ -133,7 +133,9 @@
 export default {
   name: 'Profile',
   data() {
+    const baseUrl = import.meta.env.BASE_URL
     return {
+      baseUrl,
       // GANTI NAMA DI SINI - Data profil mahasiswa
       profile: {
         // GANTI NAMA DI SINI
@@ -219,6 +221,15 @@ export default {
       ]
     }
   },
+  computed: {
+    coverGradientStyle() {
+      return {
+        backgroundImage: `url(${this.baseUrl}images/hero-gunung-mas.jpg)`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      }
+    }
+  },
   mounted() {
     this.initScrollReveal()
   },
@@ -259,7 +270,6 @@ export default {
 .cover-gradient {
   position: absolute;
   inset: 0;
-  background: url('/images/hero-gunung-mas.jpg') center/cover;
   opacity: 0.2;
 }
 
